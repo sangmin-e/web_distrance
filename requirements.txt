@@ -1,5 +1,4 @@
 geopy
 requests
-fastapi
-uvicorn
+
 streamlit
