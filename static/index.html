@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenStreetMap 거리 계산기</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>거리 계산기</h1>
+            <p>OpenStreetMap 기반 두 지점 간 거리 측정</p>
+        </header>
+
+        <main>
+            <div class="card">
+                <div class="input-group">
+                    <label for="start-input">출발지</label>
+                    <div class="search-box">
+                        <input type="text" id="start-input" placeholder="예: 서울역">
+                        <button id="start-search-btn" class="btn-search">검색</button>
+                    </div>
+                    <div id="start-status" class="status-msg">선택되지 않음</div>
+                </div>
+
+                <div class="divider">
+                    <div class="line"></div>
+                    <div class="icon">⬇</div>
+                    <div class="line"></div>
+                </div>
+
+                <div class="input-group">
+                    <label for="end-input">도착지</label>
+                    <div class="search-box">
+                        <input type="text" id="end-input" placeholder="예: 부산역">
+                        <button id="end-search-btn" class="btn-search">검색</button>
+                    </div>
+                    <div id="end-status" class="status-msg">선택되지 않음</div>
+                </div>
+
+                <button id="calc-btn" class="btn-primary" disabled>거리 계산하기</button>
+
+                <div id="result-area" class="result-area hidden">
+                    <div class="result-value">총 거리: <span id="distance-value">0</span> km</div>
+                    <a href="#" id="map-link" target="_blank" class="btn-link">지도에서 경로 보기</a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
